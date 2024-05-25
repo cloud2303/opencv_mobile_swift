@@ -14,6 +14,10 @@
 		DA11EA8E2C02154E00B6DD8E /* cviosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA11EA8D2C02154E00B6DD8E /* cviosTests.swift */; };
 		DA11EA982C02154E00B6DD8E /* cviosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA11EA972C02154E00B6DD8E /* cviosUITests.swift */; };
 		DA11EA9A2C02154E00B6DD8E /* cviosUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA11EA992C02154E00B6DD8E /* cviosUITestsLaunchTests.swift */; };
+		DA11EAA72C02156E00B6DD8E /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA11EAA62C02156E00B6DD8E /* opencv2.framework */; };
+		DA11EAB02C0219B900B6DD8E /* example.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DA11EAAF2C0219B900B6DD8E /* example.jpg */; };
+		DA11EAB42C021A7300B6DD8E /* cvHelper.mm in Sources */ = {isa = PBXBuildFile; fileRef = DA11EAB32C021A7300B6DD8E /* cvHelper.mm */; };
+		DA11EAB62C0220D700B6DD8E /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = DA11EAB52C0220D700B6DD8E /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,12 @@
 		DA11EA932C02154E00B6DD8E /* cviosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cviosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA11EA972C02154E00B6DD8E /* cviosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cviosUITests.swift; sourceTree = "<group>"; };
 		DA11EA992C02154E00B6DD8E /* cviosUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cviosUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DA11EAA62C02156E00B6DD8E /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
+		DA11EAA92C02184400B6DD8E /* cvHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cvHelper.h; sourceTree = "<group>"; };
+		DA11EAAA2C02187800B6DD8E /* cvios-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "cvios-Bridging-Header.h"; sourceTree = "<group>"; };
+		DA11EAAF2C0219B900B6DD8E /* example.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = example.jpg; sourceTree = "<group>"; };
+		DA11EAB32C021A7300B6DD8E /* cvHelper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = cvHelper.mm; sourceTree = "<group>"; };
+		DA11EAB52C0220D700B6DD8E /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA11EAA72C02156E00B6DD8E /* opencv2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +85,8 @@
 		DA11EA702C02154C00B6DD8E = {
 			isa = PBXGroup;
 			children = (
+				DA11EAB52C0220D700B6DD8E /* .gitignore */,
+				DA11EAA62C02156E00B6DD8E /* opencv2.framework */,
 				DA11EA7B2C02154C00B6DD8E /* cvios */,
 				DA11EA8C2C02154E00B6DD8E /* cviosTests */,
 				DA11EA962C02154E00B6DD8E /* cviosUITests */,
@@ -94,8 +107,10 @@
 		DA11EA7B2C02154C00B6DD8E /* cvios */ = {
 			isa = PBXGroup;
 			children = (
+				DA11EAA82C0217E000B6DD8E /* cvHelper */,
 				DA11EA7C2C02154C00B6DD8E /* cviosApp.swift */,
 				DA11EA7E2C02154C00B6DD8E /* ContentView.swift */,
+				DA11EAAF2C0219B900B6DD8E /* example.jpg */,
 				DA11EA802C02154D00B6DD8E /* Assets.xcassets */,
 				DA11EA822C02154D00B6DD8E /* Preview Content */,
 			);
@@ -125,6 +140,16 @@
 				DA11EA992C02154E00B6DD8E /* cviosUITestsLaunchTests.swift */,
 			);
 			path = cviosUITests;
+			sourceTree = "<group>";
+		};
+		DA11EAA82C0217E000B6DD8E /* cvHelper */ = {
+			isa = PBXGroup;
+			children = (
+				DA11EAA92C02184400B6DD8E /* cvHelper.h */,
+				DA11EAB32C021A7300B6DD8E /* cvHelper.mm */,
+				DA11EAAA2C02187800B6DD8E /* cvios-Bridging-Header.h */,
+			);
+			path = cvHelper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,6 +220,7 @@
 				TargetAttributes = {
 					DA11EA782C02154C00B6DD8E = {
 						CreatedOnToolsVersion = 15.4;
+						LastSwiftMigration = 1540;
 					};
 					DA11EA882C02154E00B6DD8E = {
 						CreatedOnToolsVersion = 15.4;
@@ -231,7 +257,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA11EAB62C0220D700B6DD8E /* .gitignore in Resources */,
 				DA11EA842C02154D00B6DD8E /* Preview Assets.xcassets in Resources */,
+				DA11EAB02C0219B900B6DD8E /* example.jpg in Resources */,
 				DA11EA812C02154D00B6DD8E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,6 +285,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA11EAB42C021A7300B6DD8E /* cvHelper.mm in Sources */,
 				DA11EA7F2C02154C00B6DD8E /* ContentView.swift in Sources */,
 				DA11EA7D2C02154C00B6DD8E /* cviosApp.swift in Sources */,
 			);
@@ -419,17 +448,23 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"cvios/Preview Content\"";
 				DEVELOPMENT_TEAM = ZZXLAQ755Q;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -438,6 +473,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = cv.jiahui.cvios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "cvios/cvHelper/cvios-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -448,17 +485,23 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"cvios/Preview Content\"";
 				DEVELOPMENT_TEAM = ZZXLAQ755Q;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -467,6 +510,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = cv.jiahui.cvios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "cvios/cvHelper/cvios-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
